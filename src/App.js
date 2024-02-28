@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Componentes/Header';
+import ListaBolsas from './Componentes/ListaBolsas';
+import DetalleBolsa from './Componentes/DetalleBolsa';
+import Footer from './Componentes/Footer';
+import './App.css'
+
+const bolsas = [
+  { nombre: 'Bolsa 1', precio: 20.0 },
+  { nombre: 'Bolsa 2', precio: 25.0 },
+  { nombre: 'Bolsa 3', precio: 30.0 },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <me gustas></me>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div>
+      <ListaBolsas bolsas={bolsas} />
+      <DetalleBolsa />
+      </div>
+      <Footer />
     </div>
   );
 }
