@@ -1,29 +1,26 @@
-import React from 'react';
-import Header from './Componentes/Header';
-import ListaBolsas from './Componentes/ListaBolsas';
-import DetalleBolsa from './Componentes/DetalleBolsa';
-import Footer from './Componentes/Footer';
-import './App.css'
-
-const bolsas = [
-  { nombre: 'Kurt Geiger London', precio: 20.0 },
-  { nombre: 'Kurt Geiger London Mini Kensington Crossbody', precio: 25.0 },
-  { nombre: 'Bolsa 5', precio: 30.0 },
-  { nombre: 'Bolsa 4', precio: 10.0 },
-  { nombre: 'Bolsa 5', precio: 40.0 },
-  { nombre: 'Bolsa 6', precio: 15.0 },
-  { nombre: 'Bolsa 7', precio: 9.99 }
-];
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Layout from "./Componentes/Layout";
+import Home from "./Componentes/Home";
+import About from "./Componentes/About";
+import Dashboard from "./Componentes/Dashboard";
+import Default from "./Componentes/Default";
 
 function App() {
   return (
     <div>
-      <Header />
-      <div className='App-header1'>
-        <ListaBolsas bolsas={bolsas} />
-        <DetalleBolsa detalleEspecifico="Detalles específicos de la bolsa" />
-      </div>
-      <Footer />
+      <center>
+      <h1 >Tienda de bolsas</h1>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route path="about" element={<About />}/>
+        <Route path="/" element={<Home />}/>
+        <Route path="dashboard" element={<Dashboard />}/>
+        <Route path="*" element={<Default />}/>
+        </ Route>
+      </Routes>
+      </center>
+      
     </div>
   );
 }

@@ -1,68 +1,101 @@
-
-.App {
-  text-align: center;
+body{
+  background-image: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
 }
 
-.App-header {
-  background-color: #ea9e78;
-  min-height: 20vh;
+nav {
+  background: white;
+  width: 360px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 22px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
-.App-Footer {
-  background-color: #000000;
-  min-height: 26vh;
+
+nav > a {
+  color:black;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 22px;
+}
+nav > a:hover{
+  transition: 0.22s;
+  background: rgb(56, 130, 209);
+  color:white;
+}
+
+.slider {
+  background: rgb(251, 250, 250);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: calc(250px * 14);
 }
 
-.App-header1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc; /* Añadido para el borde */
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+.slide {
+  height: 100px;
+  width: 250px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(calc(-250px * 7));
   }
 }
 
-.ListaBolsas {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px;
-}
-
-.DetalleBolsa {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-}
-
-.Bolsa {
-  border: 1px solid #ccc;
-  padding: 10px;
+.Tituloo {
   text-align: center;
+  font-family: 'Comic Sans MS';
+  font-weight: bold;
+  font-size: 30px;
+  color: #EBD758;
+  text-shadow: 
+    -1px 0 #414D68, 
+    0 1px #414D68, 
+    1px 0 #414D68, 
+    0 -1px #414D68, 
+    -2px 2px 0 #414D68, 
+    2px 2px 0 #414D68, 
+    1px 1px #414D68, 
+    2px 2px #414D68, 
+    3px 3px #414D68, 
+    4px 4px #414D68, 
+    5px 5px #414D68, 
+    6px 6px #414D68, 
+    7px 7px #414D68, 
+    8px 8px #414D68, 
+    9px 9px #414D68;
 }
 
-.acomodo{
-  align-items: left;
-}
