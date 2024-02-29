@@ -1,9 +1,10 @@
 import React from 'react';
 
-const DetalleBolsa = () => (
-  <div>
+const DetalleBolsa = ({ detalleEspecifico }) => (
+  <div className='DetalleBolsa'>
     <h2>Detalle de la Bolsa</h2>
-    {/* Agrega detalles específicos de la bolsa */}
+    {/* Utiliza la variable detalleEspecifico */}
+    <p>{detalleEspecifico}</p>
   </div>
 );
 

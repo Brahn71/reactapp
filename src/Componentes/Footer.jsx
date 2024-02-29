@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Footer = ({ items }) => (
-  <div >
+  <div className='App-Footer'>
     <h2>Informacion de abajo</h2>
   </div>
 );

@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #aa8304;
+  background-color: #ea9e78;
   min-height: 20vh;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   color: white;
 }
 .App-Footer {
-  background-color: #aa8304;
+  background-color: #000000;
   min-height: 26vh;
   display: flex;
   flex-direction: column;
@@ -25,15 +25,11 @@
 }
 
 .App-header1 {
-  border: 5px solid black; 
-  width: 500px; 
- 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color:#aa8304;
-  margin: auto; 
+  border: 1px solid #ccc; /* Añadido para el borde */
+  height: 100vh; /* Ajusta la altura según tus necesidades */
 }
 
 .App-link {
@@ -48,4 +44,25 @@
     transform: rotate(360deg);
   }
 }
-/*              */
+
+.ListaBolsas {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.DetalleBolsa {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.Bolsa {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.acomodo{
+  align-items: left;
+}

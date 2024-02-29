@@ -2,12 +2,12 @@ import React from 'react';
 import Bolsa from './Bolsa';
 
 const ListaBolsas = ({ bolsas }) => (
-  <div>
-    <h2>Lista de Bolsas</h2>
+  <div className='ListaBolsas'>
     {bolsas.map((bolsa, index) => (
-      <Bolsa key={index} {...bolsa} />
+      <Bolsa key={index} nombre={bolsa.nombre} precio={bolsa.precio} />
     ))}
   </div>
 );
+
 
 export default ListaBolsas;
