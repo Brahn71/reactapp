@@ -9,6 +9,7 @@ const Layout = () => {
         <a href="/about">Bolsas</a>
         <a href="/dashboard">Contacto</a>
       </nav>
+      <br />
       <Outlet />
     </div>
   );
