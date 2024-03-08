@@ -7,7 +7,7 @@ const Layout = () => {
       <nav> 
         <a href="/">Home</a>
         <a href="/about">Bolsas</a>
-        <a href="/dashboard">Contacto</a>
+        <a href="/dashboard">Image Display</a>
       </nav>
       <br />
       <Outlet />

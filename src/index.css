@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
 
 body {
   margin: 0;
@@ -16,3 +18,9 @@ code {
     monospace;
 }
 
+.centrado {
+  width: 300px; 
+  height: 200px; 
+  padding: 20px; 
+  text-align: center; 
+}
